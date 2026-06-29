@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request a Ride | GoSafe Transport</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <a href="home.html" class="logo">GoSafe</a>
+            </div>
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="home.html" class="active">Ride</a></li>
+                    <li><a href="index.html">About GoSafe</a></li>
+                </ul>
+            </div>
+            <div class="nav-actions">
+                <span id="userEmail" class="nav-link user-email"></span>
+                <button type="button" id="logoutBtn" class="btn-signup">Log out</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero home-hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1>Where to?</h1>
+                    <p class="home-subtitle">Enter your pickup and destination to see your fare instantly.</p>
+
+                    <form class="booking-form" id="rideForm">
+                        <div class="form-group">
+                            <label for="pickup">Pickup</label>
+                            <div class="input-wrapper">
+                                <input type="text" id="pickup" placeholder="e.g. Cape Town International Airport" class="form-input" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dropoff">Dropoff</label>
+                            <div class="input-wrapper">
+                                <input type="text" id="dropoff" placeholder="e.g. V&A Waterfront" class="form-input" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Date</label>
+                                <input type="date" id="date" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Time</label>
+                                <input type="time" id="time" class="form-input">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-primary" id="estimateBtn">See price</button>
+                        <button type="button" class="btn-secondary home-request-btn" id="requestBtn" hidden>Request ride</button>
+                    </form>
+
+                    <div id="pricePanel" class="price-panel" hidden>
+                        <div class="price-panel-header">
+                            <span class="price-label">Estimated fare</span>
+                            <span id="priceAmount" class="price-amount"></span>
+                        </div>
+                        <p id="priceDetails" class="price-details"></p>
+                        <p class="price-note">Final fare may vary slightly based on route and traffic.</p>
+                    </div>
+
+                    <div id="rideStatus" class="ride-status" hidden></div>
+                </div>
+
+                <div class="hero-image">
+                    <img src="images/782535.jpg" alt="GoSafe Transport ride" class="hero-img">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="js/home.js"></script>
+</body>
+</html>
